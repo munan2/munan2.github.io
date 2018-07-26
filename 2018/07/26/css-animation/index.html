@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="css," />
 
 
 
@@ -79,13 +79,21 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="munan&#39;s blog">
-<meta property="og:url" content="https://munan2.github.io/index.html">
+<meta name="description" content="transition 过渡transition允许css属性值在一定时间内可以平滑地过渡。其主要包括四个属性值：  transition-property 过渡效果的css属性名称 transiton-duration 过渡时间 transition-timing-function 过渡效果的速度曲线 可以取值     取值 描述     linear 平滑，相同的速度   ease 先慢后快再">
+<meta name="keywords" content="css">
+<meta property="og:type" content="article">
+<meta property="og:title" content="css-animation">
+<meta property="og:url" content="https://munan2.github.io/2018/07/26/css-animation/index.html">
 <meta property="og:site_name" content="munan&#39;s blog">
+<meta property="og:description" content="transition 过渡transition允许css属性值在一定时间内可以平滑地过渡。其主要包括四个属性值：  transition-property 过渡效果的css属性名称 transiton-duration 过渡时间 transition-timing-function 过渡效果的速度曲线 可以取值     取值 描述     linear 平滑，相同的速度   ease 先慢后快再">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://user-gold-cdn.xitu.io/2018/7/9/1647e1edc28c4935?w=862&h=870&f=png&s=262676">
+<meta property="og:image" content="https://user-gold-cdn.xitu.io/2018/7/9/1647e1fd19984eb7?w=1268&h=1796&f=png&s=128634">
+<meta property="og:updated_time" content="2018-07-26T07:21:44.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="munan&#39;s blog">
+<meta name="twitter:title" content="css-animation">
+<meta name="twitter:description" content="transition 过渡transition允许css属性值在一定时间内可以平滑地过渡。其主要包括四个属性值：  transition-property 过渡效果的css属性名称 transiton-duration 过渡时间 transition-timing-function 过渡效果的速度曲线 可以取值     取值 描述     linear 平滑，相同的速度   ease 先慢后快再">
+<meta name="twitter:image" content="https://user-gold-cdn.xitu.io/2018/7/9/1647e1edc28c4935?w=862&h=870&f=png&s=262676">
 
 
 
@@ -115,13 +123,13 @@
 
 
 
-  <link rel="canonical" href="https://munan2.github.io/"/>
+  <link rel="canonical" href="https://munan2.github.io/2018/07/26/css-animation/"/>
 
 
 
 
 
-  <title>munan's blog</title>
+  <title>css-animation | munan's blog</title>
   
 
 
@@ -140,8 +148,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -278,9 +285,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -310,9 +317,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/07/26/css-animation/" itemprop="url">css-animation</a></h1>
+          <h1 class="post-title" itemprop="name headline">css-animation</h1>
         
 
         <div class="post-meta">
@@ -384,22 +389,127 @@
       
 
       
-        
-          
-          transition 过渡transition允许css属性值在一定时间内可以平滑地过渡。其主要包括四个属性值：
+        <h2 id="transition-过渡"><a href="#transition-过渡" class="headerlink" title="transition 过渡"></a>transition 过渡</h2><p>transition允许css属性值在一定时间内可以平滑地过渡。其主要包括四个属性值：</p>
+<ul>
+<li><strong>transition-property</strong> 过渡效果的css属性名称</li>
+<li><strong>transiton-duration</strong> 过渡时间</li>
+<li><strong>transition-timing-function</strong> 过渡效果的速度曲线 可以取值</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">取值</th>
+<th style="text-align:left">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">linear</td>
+<td style="text-align:left">平滑，相同的速度</td>
+</tr>
+<tr>
+<td style="text-align:left">ease</td>
+<td style="text-align:left">先慢后快再慢</td>
+</tr>
+<tr>
+<td style="text-align:left">ease-in</td>
+<td style="text-align:left">以慢速开始</td>
+</tr>
+<tr>
+<td style="text-align:left">ease-out</td>
+<td style="text-align:left">以慢速结束</td>
+</tr>
+<tr>
+<td style="text-align:left">ease-in-out</td>
+<td style="text-align:left">以慢速开始和结束的过渡效果</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>transition-delay</strong> 延迟时间</li>
+</ul>
+<p><strong>这里需要注意一下几点</strong></p>
+<blockquote>
+<p>transition需要事件触发，不可以在网页加载时自动发生<br>transition是一次性的，不能重复发生，除非是一再触发</p>
+</blockquote>
+<h3 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="undefined">    #box &#123;</span></span><br><span class="line"><span class="undefined">        width: 40px;</span></span><br><span class="line"><span class="undefined">        height: 40px;</span></span><br><span class="line"><span class="undefined">        background-color: #f00;</span></span><br><span class="line"><span class="undefined">        transition: width 2s ease .5s; </span></span><br><span class="line"><span class="undefined">    &#125;</span></span><br><span class="line"><span class="undefined">    #box:hover &#123;</span></span><br><span class="line"><span class="undefined">        width: 100px;</span></span><br><span class="line"><span class="undefined">    &#125;</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"box"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="animation-动画"><a href="#animation-动画" class="headerlink" title="animation 动画"></a>animation 动画</h2><p>animation动画，其可以不需要事件触发就可以进行，其属性如下：</p>
+<ul>
+<li><strong>animation-name</strong> 需要绑定到选择器的keyframe名称</li>
+<li><strong>animation-duration</strong> 动画持续时间</li>
+<li><strong>animation-timing-function</strong> 动画速度曲线，以什么样的速度进行变化，与transition的animation-timing-function一样</li>
+<li><strong>animation-delay</strong> 动画延迟时间</li>
+<li><strong>animation-iteration-count</strong> 播放次数，其取值可以是数字，或者infinite(无限次播放)</li>
+<li><strong>animation-direction</strong> 是否应该轮流反向播放动画，默认取值normal，也可以取值alternate(反响播放动画)</li>
+<li><strong>animation-play-state</strong> 规定动画是否正在运行或暂停</li>
+<li><strong>animation-fill-mode</strong> 固定动画时间之外状态</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">值</th>
+<th style="text-align:left">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">none</td>
+<td style="text-align:left">不改变默认行为</td>
+</tr>
+<tr>
+<td style="text-align:left">forwards</td>
+<td style="text-align:left">保持最后一个属性值</td>
+</tr>
+<tr>
+<td style="text-align:left">backwards</td>
+<td style="text-align:left">应用开始属性值</td>
+</tr>
+<tr>
+<td style="text-align:left">both</td>
+<td style="text-align:left">根据animation-direction轮流应用forwards和backwards规则。</td>
+</tr>
+</tbody>
+</table>
+<h3 id="keyframe"><a href="#keyframe" class="headerlink" title="keyframe"></a>keyframe</h3><p>@keyframes，控制动画的中间环节，其主要必须需要的三个值是：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">值</th>
+<th style="text-align:left">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">animation-name</td>
+<td style="text-align:left">动画名称</td>
+</tr>
+<tr>
+<td style="text-align:left">keyframes-selector</td>
+<td style="text-align:left">动画市场的百分比，0-100%</td>
+</tr>
+<tr>
+<td style="text-align:left">css-styles</td>
+<td style="text-align:left">css样式属性</td>
+</tr>
+</tbody>
+</table>
+<h3 id="示例-1"><a href="#示例-1" class="headerlink" title="示例"></a>示例</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="undefined">    .box &#123;</span></span><br><span class="line"><span class="undefined">        width: 50px;</span></span><br><span class="line"><span class="undefined">        height: 50px;</span></span><br><span class="line"><span class="undefined">        background-color: #f00;</span></span><br><span class="line"><span class="undefined">        animation: change 2s ease 0.1s infinite;</span></span><br><span class="line"><span class="undefined">    &#125;</span></span><br><span class="line"><span class="undefined">    @keyframes change &#123;</span></span><br><span class="line"><span class="undefined">        50% &#123;</span></span><br><span class="line"><span class="undefined">            width: 150px;</span></span><br><span class="line"><span class="undefined">            height: 150px;</span></span><br><span class="line"><span class="undefined">            opacity: 0.3;</span></span><br><span class="line"><span class="undefined">        &#125;</span></span><br><span class="line"><span class="undefined">        100% &#123;</span></span><br><span class="line"><span class="undefined">            width: 50px;</span></span><br><span class="line"><span class="undefined">            height: 50px;</span></span><br><span class="line"><span class="undefined">            opacity: 1;</span></span><br><span class="line"><span class="undefined">        &#125;</span></span><br><span class="line"><span class="undefined">    &#125;</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"box"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="transform-变形"><a href="#transform-变形" class="headerlink" title="transform 变形"></a>transform 变形</h2><p>主要包括旋转(rotate)、扭曲(skew)、缩放(scale)、移动(translate)和矩阵变形(matrix)。其中比较常用的三种是rotate、scale和translate。</p>
+<h3 id="transform-origin-设置旋转元素的基点位置"><a href="#transform-origin-设置旋转元素的基点位置" class="headerlink" title="transform-origin 设置旋转元素的基点位置"></a>transform-origin 设置旋转元素的基点位置</h3><p><strong>注意该属性必须和transform一起使用</strong><br>transform-origin:x-axis y-axis z-axis。其默认值是50% 50% 0。<br>x-axis和y-axis的取值可以是left、center、right、length和%。<br>z-axis的取值只能是length</p>
+<h3 id="1-2d转换"><a href="#1-2d转换" class="headerlink" title="1. 2d转换"></a>1. 2d转换</h3><ul>
+<li><strong>translate(x,y)</strong> 平移  </li>
+<li><strong>rotate(xdeg)</strong> 沿着顺时针旋转，允许负值  </li>
+<li><strong>scale(x,y)</strong> 尺寸缩放  </li>
+<li><strong>skew(x,y)</strong> 根据给定的水平线和垂直线进行给定角度的翻转  </li>
+<li><strong>matrix()</strong> 把所有的2d转换方法结合在一起 </li>
+</ul>
+<h3 id="2-3d转换"><a href="#2-3d转换" class="headerlink" title="2. 3d转换"></a>2. 3d转换</h3><p>首先要弄清楚，在3d的方向怎么确定，哪个方向是x轴，哪个方向是y轴，哪个方向是z轴。这里可以通过下图看出。通过这个图，我们就可以确认rotateX、rotateY、rotateZ分别是按照哪个方向转换。<br><img src="https://user-gold-cdn.xitu.io/2018/7/9/1647e1edc28c4935?w=862&amp;h=870&amp;f=png&amp;s=262676" alt=""><br><strong>结合3d转换的话，需要知道一个属性，perspective（视角）</strong></p>
+<h4 id="perspective"><a href="#perspective" class="headerlink" title="perspective"></a>perspective</h4><p>定义3d元素距视角的距离，其值是number|none。其视点是浏览器正前方，就是我们眼睛看着电脑所在的方位。</p>
+<h4 id="perspective-origin-设置基点的位置"><a href="#perspective-origin-设置基点的位置" class="headerlink" title="perspective-origin 设置基点的位置"></a>perspective-origin 设置基点的位置</h4><p>perspective-origin: x-axis y-axis;</p>
+<h3 id="示例-2"><a href="#示例-2" class="headerlink" title="示例"></a>示例</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="undefined">    .box &#123;</span></span><br><span class="line"><span class="undefined">        width: 200px;</span></span><br><span class="line"><span class="undefined">        height: 200px;</span></span><br><span class="line"><span class="undefined">        background-color: #f00;</span></span><br><span class="line"><span class="undefined">        opacity: 0.5;</span></span><br><span class="line"><span class="undefined">    &#125;</span></span><br><span class="line"><span class="undefined">    .aa:hover &#123;</span></span><br><span class="line"><span class="undefined">        transition: transform 1s ease;</span></span><br><span class="line"><span class="undefined">        transform: rotateZ(180deg);</span></span><br><span class="line"><span class="undefined">    &#125;</span></span><br><span class="line"><span class="undefined">    .bb:hover &#123;</span></span><br><span class="line"><span class="undefined">        transform: rotateY(180deg);</span></span><br><span class="line"><span class="undefined">        transition: transform 1s ease;</span></span><br><span class="line"><span class="undefined">    &#125;</span></span><br><span class="line"><span class="undefined">    .cc &#123;</span></span><br><span class="line"><span class="undefined">        transform: rotateX(60deg);</span></span><br><span class="line"><span class="undefined">    &#125;</span></span><br><span class="line"><span class="undefined">    .dd &#123;</span></span><br><span class="line"><span class="undefined">        transform: rotateY(60deg);</span></span><br><span class="line"><span class="undefined">    &#125;</span></span><br><span class="line"><span class="undefined">    .ee &#123;</span></span><br><span class="line"><span class="undefined">        transform: rotateZ(60deg);</span></span><br><span class="line"><span class="undefined">    &#125;</span></span><br><span class="line"><span class="undefined">    .box-container &#123;</span></span><br><span class="line"><span class="undefined">        margin: 100px;</span></span><br><span class="line"><span class="undefined">        width: 200px;</span></span><br><span class="line"><span class="undefined">        height: 200px;</span></span><br><span class="line"><span class="undefined">        border: 1px solid #000;</span></span><br><span class="line"><span class="undefined">        perspective: 600px;</span></span><br><span class="line"><span class="undefined">    &#125;</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"box-container"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"cc box"</span>&gt;</span>rolateX(45deg)<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"box-container"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"dd box"</span>&gt;</span>rolateY(45deg)<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"box-container"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"ee box"</span>&gt;</span>rolateZ(45deg)<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>不加perspective: 600px;其效果图如下左图，加上perspective: 600px;其效果图如右图：<br><img src="https://user-gold-cdn.xitu.io/2018/7/9/1647e1fd19984eb7?w=1268&amp;h=1796&amp;f=png&amp;s=128634" alt=""><br>这里如果不加上perspective这个属性，你会发现图像还是平面的效果，但是加上这个属性给视点到浏览器一个视觉距离之后，会看到一个3d的效果。</p>
+<h2 id="3D效果"><a href="#3D效果" class="headerlink" title="3D效果"></a>3D效果</h2><p>注意有一个属性。transform-style: preserve-3d的属性设置，默认值为flat，即“素描作品”。这个属性的设置旨在告诉子元素需要遵循怎样的空间体系规则。这个属性不能继承，因此只要有子元素需要设置空间体系规则，就得在父元素声明这个属性。</p>
 
-transition-property 过渡效果的css属性名称
-transiton-duration 过渡时间
-transition-timing-function 过渡效果的速度
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/07/26/css-animation/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
       
     </div>
     
@@ -414,319 +524,36 @@ transition-timing-function 过渡效果的速度
 
     <footer class="post-footer">
       
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://munan2.github.io/2018/07/26/vue-life-cycle/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="xyz@munan">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="https://raw.githubusercontent.com/munan2/VUE-study/master/imgs/avatar.jpeg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="munan's blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/07/26/vue-life-cycle/" itemprop="url">vue生命周期</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-07-26T14:18:56+08:00">
-                2018-07-26
-              </time>
-            
-
-            
-
-            
-          </span>
-
+        <div class="post-tags">
           
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/vue/" itemprop="url" rel="index">
-                    <span itemprop="name">vue</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
+            <a href="/tags/css/" rel="tag"># css</a>
           
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
         </div>
-      </header>
-    
+      
 
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
+      
       
       
 
       
-        
-          
-          最近在整理一些知识点，就开始整理了有关于vue生命周期的一些东西。首先需要仔细观察一下vue的生命周期图：针对这个图，做整个vue生命周期的分析。
-生命周期的过程
-首先创建vue实例，然后初始化事件并监测数据。在created阶段之前就完成了数据的监测（这个阶段data和data的属性已存在，但是e
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/07/26/vue-life-cycle/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/07/26/vue-life-cycle/" rel="next" title="vue生命周期">
+                <i class="fa fa-chevron-left"></i> vue生命周期
+              </a>
+            
           </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
 
-    
+          <span class="post-nav-divider"></span>
 
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://munan2.github.io/2018/07/26/vuex/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="xyz@munan">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="https://raw.githubusercontent.com/munan2/VUE-study/master/imgs/avatar.jpeg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="munan's blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/07/26/vuex/" itemprop="url">vuex</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
+          <div class="post-nav-prev post-nav-item">
             
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-07-26T11:46:13+08:00">
-                2018-07-26
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/vue/" itemprop="url" rel="index">
-                    <span itemprop="name">vue</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
+          </div>
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          
-          vuex是什么专门为vue.js应用程序开发的状态管理模式
-其三个层次分别代表：
-state 存放共享数据
-view 视图
-Actions 在view上用户的行为需要同步修改state中的共享数据，这里就是响应view上的用户输入导致的变化
-
-在实际的操作中，会遇到如下情况：
-多个视图依赖于同一状态
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/07/26/vuex/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -736,167 +563,11 @@ Actions 在view上用户的行为需要同步修改state中的共享数据，这
   </article>
 
 
-    
-      
 
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://munan2.github.io/2018/07/13/component-communication/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="xyz@munan">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="https://raw.githubusercontent.com/munan2/VUE-study/master/imgs/avatar.jpeg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="munan's blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/07/13/component-communication/" itemprop="url">vue组件通信</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-07-13T10:45:53+08:00">
-                2018-07-13
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/vue/" itemprop="url" rel="index">
-                    <span itemprop="name">vue</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-          组件之间互相通信的方法
-父组件向子组件传值
-子组件向父组件传值
-非父子组件通信
-
-父组件向子组件传值
-使用props属性进行传值
-
-示例父组件
-12345&lt;div id="c-box"&gt;    这是父容器    &lt;componentD :changeState="changeSta
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/07/13/component-communication/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
+    <div class="post-spread">
       
     </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
   </div>
-  
-  
-  
-  </article>
-
-
-    
-  </section>
-
-  
 
 
           </div>
@@ -904,6 +575,10 @@ Actions 在view上用户的行为需要同步修改state中的共享数据，这
 
 
           
+
+  
+
+
 
         </div>
         
@@ -924,8 +599,17 @@ Actions 在view上用户的行为需要同步修改state中的共享数据，这
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -989,6 +673,22 @@ Actions 在view上用户的行为需要同步修改state中的共享数据，这
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#transition-过渡"><span class="nav-number">1.</span> <span class="nav-text">transition 过渡</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#示例"><span class="nav-number">1.1.</span> <span class="nav-text">示例</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#animation-动画"><span class="nav-number">2.</span> <span class="nav-text">animation 动画</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#keyframe"><span class="nav-number">2.1.</span> <span class="nav-text">keyframe</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#示例-1"><span class="nav-number">2.2.</span> <span class="nav-text">示例</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#transform-变形"><span class="nav-number">3.</span> <span class="nav-text">transform 变形</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#transform-origin-设置旋转元素的基点位置"><span class="nav-number">3.1.</span> <span class="nav-text">transform-origin 设置旋转元素的基点位置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2d转换"><span class="nav-number">3.2.</span> <span class="nav-text">1. 2d转换</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3d转换"><span class="nav-number">3.3.</span> <span class="nav-text">2. 3d转换</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#perspective"><span class="nav-number">3.3.1.</span> <span class="nav-text">perspective</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#perspective-origin-设置基点的位置"><span class="nav-number">3.3.2.</span> <span class="nav-text">perspective-origin 设置基点的位置</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#示例-2"><span class="nav-number">3.4.</span> <span class="nav-text">示例</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3D效果"><span class="nav-number">4.</span> <span class="nav-text">3D效果</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -1123,6 +823,10 @@ Actions 在view上用户的行为需要同步修改state中的共享数据，这
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
